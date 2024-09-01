@@ -12,7 +12,30 @@ Welcome to the Real Estate Landing Page Template! This premium template features
 - **Style Directory**: CSS files for styling and responsiveness.
 
 ## File Structure
-/real-estate-landing-page │ ├── index.html │ ├── components/ │ └── topbar/ │ ├── topbar.js │ ├── scripts/ │ └── carousel.js │ ├── logo/ │ └── your-logo.png │ ├── assets/ │ │ └── example-image.jpg │ │ └── style/ ├── css/ │ ├── styles.css │ └── responsive.css
+/real-estate-landing-page 
+│ 
+├── index.html 
+│ 
+├── components/ 
+│    |
+|    └── topbar.js 
+│ 
+├── scripts/ 
+|   │ 
+|   └── carousel.js 
+│── logo/ 
+|   |
+│   └── your-logo.png 
+│ 
+│── assets/ 
+│   │ 
+│   └── example-image.jpg 
+│ 
+└── style/css/ 
+    │ 
+    └── styles.css 
+    │ 
+    └── responsive.css
 
 ### `index.html`
 The main HTML file that serves as the landing page. It includes references to all components, styles, and scripts.
