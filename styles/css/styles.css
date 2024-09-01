@@ -1,0 +1,316 @@
+:root {
+    --radius: 40px;
+    --background: rgb(2 9 40);
+    --primary: rgb(2 9 40);
+    --cta: rgb(208 172 111);
+    --opacity: 0.7;
+    --font-color: #c1bfbe;
+}
+
+body {
+    background-color: var(--background);
+    margin: 0;
+}
+
+.main {
+    background-color: var(--background);
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    margin: auto;
+    padding: 20px;
+    height: 600px;
+    width: 90%;
+    justify-content: center;
+    display: flex;
+    border-radius: 40px 40px 0 0;
+}
+
+.image {
+    height: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /*Change Image or URL*/
+    background-image: url("../../assets/primary-image.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 40px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    align-items: center;
+    gap: 10px;
+}
+
+.form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    position: relative;
+    height: 560px;
+    width: 390px;
+    background: var(--background);
+    opacity: var(--opacity);
+    border: 1px solid var(--primary);
+    border-radius: 40px;
+}
+
+.form-title {
+    color: var(--font-color);
+    width: 300px;
+}
+
+.form-title h2 {
+    text-align: center;
+}
+
+/*Input focus move up label*/
+.form__input:focus+.form__label {
+    top: -0.5rem;
+    left: 0.8rem;
+    font-weight: 500;
+    position: absolute;
+    background: var(--background);
+    color: white;
+    z-index: 10;
+}
+
+/*Input focus sticky top label*/
+.form__input:not(:placeholder-shown).form__input:not(:focus)+.form__label {
+    top: -0.5rem;
+    left: 0.8rem;
+    z-index: 10;
+    font-weight: 500;
+}
+
+/*Input focus*/
+.form__input:focus {
+    border: 2px solid white;
+}
+
+.form__div {
+    position: relative;
+    height: 52px;
+    width: 300px;
+}
+
+.form__input {
+    position: relative;
+    width: 100%;
+    border: 2px solid var(--font-color);
+    border-radius: 0.5rem;
+    color: var(--font-color);
+    outline: none;
+    height: 42px;
+    background: none;
+    z-index: 10;
+}
+
+.form__label {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    padding: 0 0.25rem;
+    background: var(--background);
+    color: var(--font-color);
+    transition: 0.3s;
+}
+
+.cta {
+    width: 200px;
+    height: 42px;
+    background: var(--cta);
+    opacity: 1;
+    color: var(--primary);
+    border: 1px solid var(--cta);
+    border-radius: 40px;
+}
+
+.col {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-container {
+    background: white;
+    display: flex;
+    justify-content: center;
+    opacity: 0.8;
+    border-radius: 40px;
+    padding: 10px;
+}
+
+.text-title {
+    width: 390px;
+    text-align: center;
+}
+
+.text-title h1 {
+    font-size: xx-large;
+}
+
+.subtitle {
+    width: 100%;
+    background: none;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+footer {
+    color: var(--font-color);
+    display: flex;
+    justify-content: center;
+}
+
+/*carousel*/
+.carousel {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 40px;
+}
+
+.featured {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    gap: 10px;
+    border-radius: 0 0 40px 40px;
+}
+
+.container>.text-container {
+    height: max-content;
+    justify-content: start;
+    width: 100%;
+
+}
+
+.carousel-images {
+    display: flex;
+    flex-direction: row;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 40px;
+}
+
+/* Individual slide containing multiple images */
+.carousel-slides {
+    display: flex;
+    flex-direction: row;
+    min-width: 100%;
+    height: 300px;
+    border-radius: 40px;
+    gap: 10px;
+}
+
+.img-carousel-slide {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.img-carousel-slide img {
+    width: 100%;
+    height: auto;
+    /* Mantiene la proporción de la imagen */
+    display: block;
+    /* Elimina el espacio blanco debajo de la imagen */
+}
+
+.carousel-slides a {
+    width: 100%;
+}
+
+.carousel-slides img {
+    width: 100%;
+    /* Adjust based on the number of images to be displayed at a time */
+    flex: 1 0 auto;
+    /* Ensure images do not stretch and maintain aspect ratio */
+    height: 100%;
+    border-radius: 40px;
+    object-fit: cover;
+}
+
+.hover {
+    display: none;
+    top: 0;
+    position: absolute;
+    background-color: var(--cta);
+    opacity: 0.4;
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+}
+
+.carousel-slides a:hover {
+    .hover {
+        display: block;
+    }
+}
+
+.scroll {
+    position: absolute;
+    top: 50%;
+    background-color: var(--primary);
+    opacity: var(--opacity);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 1;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.image-tag {
+    position: absolute;
+    bottom: 10px;
+    /* Ajusta según sea necesario */
+    right: 10px;
+    /* Ajusta según sea necesario */
+    background-color: var(--background);
+    opacity: var(--opacity);
+    /* Fondo semi-transparente para mejor legibilidad */
+    color: white;
+    /* Color del texto */
+    padding: 10px;
+    /* Espaciado interno */
+    border-radius: 5px;
+    /* Esquinas redondeadas */
+}

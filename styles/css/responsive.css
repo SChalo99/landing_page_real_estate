@@ -1,0 +1,58 @@
+@media only screen and (max-width: 970px) {
+    .image {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .text-title {
+        width: 100%;
+        text-align: center;
+
+    }
+
+    .container {
+        height: max-content;
+        width: 100%;
+        padding: 0%;
+        margin: 0;
+    }
+
+    .main {
+        padding: 0%;
+        margin: 0;
+    }
+
+    .container,
+    .featured {
+        background: transparent;
+        margin-top: 10px;
+    }
+
+    .featured {
+        flex-direction: column;
+    }
+
+    .featured>.text-container>h1 {
+        border-bottom: 1px solid white;
+        border-radius: 0;
+        padding-bottom: 20px;
+    }
+
+    .container>.text-container {
+        height: max-content;
+        background: transparent;
+        width: 95%;
+        color: white;
+
+    }
+
+
+    .form-container {
+        margin-top: 20px;
+    }
+
+}
