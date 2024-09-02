@@ -43,8 +43,13 @@ class TopBar extends HTMLElement {
 
     getAttributes() {
         Array.from(this.attributes).map(a => {
-            this.attrs[a.name] = a.value
+            if (a.name === "tabs" || a.name === "contact") {
+                this.attrs[a.name] = JSON.parse(a.value);
+            } else {
+                this.attrs[a.name] = a.value
+            }
         });
+        console.log(this.attrs.contact)
     }
 
     style() {
@@ -88,7 +93,7 @@ class TopBar extends HTMLElement {
     .tab {
         font-size: large;
         height: 80px;
-        width: 100px;
+        width: 100%;
         display: flex;
         align-content: center;
     }
@@ -210,39 +215,20 @@ class TopBar extends HTMLElement {
             </div>
         </div>
         <ul class="navigations" id="nav-mobile">
+         ${this.attrs.tabs.map((e) => `
             <li>
-                <a href="#">
+                <a href="${e.url}">
                     <div class="tab">
-                        <p>Home</p>
+                        <p>${e.tab}</p>
                     </div>
                 </a>
             </li>
+            `).join('')}
             <li>
-                <a href="#">
-                    <div class="tab">
-                        <p>About Us</p>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <div class="tab">
-                        <p>Our Proyects</p>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <div class="tab">
-                        <p>Contact Us</p>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="#">
+                <a href="${this.attrs.contact.url}">
                     <div class="tab number">
-                        <p>+51 987 654 321</p>
-                    </div>
+                        <p>${this.attrs.contact.phone}</p>
+                     </div>
                 </a>
             </li>
         </ul>`;

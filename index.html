@@ -4,8 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title> <!--You can change Title name-->
+    <title>Real Estate Page</title> <!--You can change Title name-->
+    <meta name="description"
+        content="Welcome to our Real Estate Page. Explore our properties, learn about our services, and get in touch with us today.">
+    <meta name="keywords" content="real estate, properties, home, buy, sell, real estate business">
+
+    <!-- Open Graph Meta Tags (For social media sharing) *MUST CHANGE THIS METADATA-->
+    <meta property="og:title" content="Real Estate">
+    <meta property="og:description"
+        content="Discover premium real estate properties with our professional services. Contact us to find your dream home today.">
+    <meta property="og:image" content="logo/logo_full.png">
+    <!-- <meta property="og:url" content="https://www.yourwebsite.com"> -->
+    <meta property="og:type" content="website">
+
     <script src="components/topbar.js"></script>
+    <script src="components/carousel.js"></script>
+    <script src="components/footer.js"></script>
+    <link rel="icon" href="logo/logo_full.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/css/styles.css">
     <link rel="stylesheet" href="styles/css/responsive.css">
@@ -14,9 +29,10 @@
 <body>
     <nav>
         <top-bar background="rgb(2 9 40)" hover="rgb(208 172 111)" logowidth="300px" lettercolor="#c1bfbe"
-            letterhover="rgb(2 9 40)"></top-bar>
+            letterhover="rgb(2 9 40)" contact='{ "url": "#", "phone": "+1 (240) 123 4567"}'
+            tabs='[{"url":"#", "tab":"Home"},{"url":"#", "tab":"About us"},{"url":"#", "tab":"Our projects"}, {"url":"#", "tab":"Testimonials"}, {"url":"#", "tab":"Contact us"}]'></top-bar>
     </nav>
-    <div class="main">
+    <div class=" main">
         <div class="container">
             <div class="image">
                 <div class="col text-title">
@@ -55,90 +71,127 @@
 
             </div>
         </div>
-        <div class="container featured">
+        <div class="container left">
             <div class="text-container subtitle">
-                <h1>Featured Properties</h1>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
-                    leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-                    with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                <h1>Coming Soon</h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                    the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
+                    type
+                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also
+                    the
+                    leap into electronic typesetting, remaining essentially unchanged. It was popularised in the
+                    1960s
+                    with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+                    desktop
                     publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
             </div>
-            <div class="carousel">
-                <div class="carousel-images">
-                    <div class="carousel-slides">
-                        <a href="#">
-                            <div class="img-carousel-slide">
-                                <img src="assets/house_1.jpg" alt="Image 1">
-                                <div class="hover"></div>
-                                <div class="image-tag">
-                                    <h3>Arlington, VA</h3>
-                                </div>
-                            </div>
-
-                        </a>
-                        <a href="#">
-                            <div class="img-carousel-slide" href="#">
-                                <img src="assets/house_2.jpg" alt="Image 2">
-                                <div class="hover"></div>
-                                <div class="image-tag">
-                                    <h3>Rockville, MD</h3>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="carousel-slides">
-                        <a href="#">
-                            <div class="img-carousel-slide" href="#">
-                                <img src="assets/house_3.jpg" alt="Image 3">
-                                <div class="hover"></div>
-                                <div class="image-tag">
-                                    <h3>Indianapolis, IN</h3>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#">
-                            <div class="img-carousel-slide" href="#">
-                                <img src="assets/house_4.jpg" alt="Image 4">
-                                <div class="hover"></div>
-                                <div class="image-tag">
-                                    <h3>Bethesda, MD</h3>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="carousel-slides">
-                        <a href="#">
-                            <div class="img-carousel-slide" href="#">
-                                <img src="assets/house_5.jpg" alt="Image 5">
-                                <div class="hover"></div>
-                                <div class="image-tag">
-                                    <h3>Los Angeles, CA</h3>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#">
-                            <div class="img-carousel-slide" href="#">
-                                <img src="assets/house_6.jpg" alt="Image 6">
-                                <div class="hover"></div>
-                                <div class="image-tag">
-                                    <h3>Las Vegas, NV</h3>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <button class="prev scroll" onclick="moveSlide(-1); stopAutoplay()">&#10094;</button>
-                <button class="next scroll" onclick="moveSlide(1); stopAutoplay()">&#10095;</button>
-            </div>
-
-            <script src="scripts/carousel.js"></script>
+            <custom-carousel id="left"></custom-carousel>
         </div>
-        <footer>
-            <p>@Copyright Your Company</p>
-        </footer>
+        <div class="container right">
+            <div class="text-container subtitle">
+                <h1>Featured Properties</h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                    the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
+                    type
+                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also
+                    the
+                    leap into electronic typesetting, remaining essentially unchanged. It was popularised in the
+                    1960s
+                    with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+                    desktop
+                    publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+            <custom-carousel id="right"></custom-carousel>
+        </div>
     </div>
+    <footer>
+        <div class="footer-container">
+            <div class="logo">
+                <img class="logo-footer" src="logo/logo_full.png" alt="logo-full">
+            </div>
+            <div class="footer-nav">
+                <span class="category" data-toggle="list1">
+                    Our Company
+                </span>
+                <ul id="list1" class="nav-list">
+                    <a href="#">
+                        <li>About us</li>
+                    </a>
+                    <a href="#">
+                        <li>Careers</li>
+                    </a>
+                    <a href="#">
+                        <li>Blogs</li>
+                    </a>
+                    <a href="#">
+                        <li>Privacy Policy</li>
+                    </a>
+                </ul>
+
+            </div>
+            <div class="footer-nav">
+                <span class="category" data-toggle="list2">
+                    Our Company
+                </span>
+                <ul id="list2" class="nav-list">
+                    <a href="#">
+                        <li>About us</li>
+                    </a>
+                    <a href="#">
+                        <li>Careers</li>
+                    </a>
+                    <a href="#">
+                        <li>Blogs</li>
+                    </a>
+                    <a href="#">
+                        <li>Privacy Policy</li>
+                    </a>
+                </ul>
+
+            </div>
+            <div class="footer-nav">
+                <span class="category" data-toggle="list3">
+                    Our Company
+                </span>
+                <ul id="list3" class="nav-list">
+                    <a href="#">
+                        <li>About us</li>
+                    </a>
+                    <a href="#">
+                        <li>Careers</li>
+                    </a>
+                    <a href="#">
+                        <li>Blogs</li>
+                    </a>
+                    <a href="#">
+                        <li>Privacy Policy</li>
+                    </a>
+                </ul>
+
+            </div>
+        </div>
+        <script>
+            document.querySelectorAll('.category').forEach(button => {
+                button.addEventListener('click', function () {
+                    var toggleListId = this.getAttribute('data-toggle');
+                    var navList = document.getElementById(toggleListId);
+
+                    if (navList.style.display === 'none' || navList.style.display === '') {
+                        navList.style.display = 'block'; // Show the list
+                        this.classList.add('open'); // Rotate arrow
+                    } else {
+                        navList.style.display = 'none'; // Hide the list
+                        this.classList.remove('open'); // Reset arrow
+                    }
+                });
+            });
+        </script>
+        <div class="copyright">
+            <p>Copyright @YourCompany</p>
+        </div>
+    </footer>
 </body>
 
 </html>
