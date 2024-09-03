@@ -68,7 +68,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
         <div class="container left">
@@ -107,90 +106,7 @@
         </div>
     </div>
     <footer>
-        <div class="footer-container">
-            <div class="logo">
-                <img class="logo-footer" src="logo/logo_full.png" alt="logo-full">
-            </div>
-            <div class="footer-nav">
-                <span class="category" data-toggle="list1">
-                    Our Company
-                </span>
-                <ul id="list1" class="nav-list">
-                    <a href="#">
-                        <li>About us</li>
-                    </a>
-                    <a href="#">
-                        <li>Careers</li>
-                    </a>
-                    <a href="#">
-                        <li>Blogs</li>
-                    </a>
-                    <a href="#">
-                        <li>Privacy Policy</li>
-                    </a>
-                </ul>
-
-            </div>
-            <div class="footer-nav">
-                <span class="category" data-toggle="list2">
-                    Our Company
-                </span>
-                <ul id="list2" class="nav-list">
-                    <a href="#">
-                        <li>About us</li>
-                    </a>
-                    <a href="#">
-                        <li>Careers</li>
-                    </a>
-                    <a href="#">
-                        <li>Blogs</li>
-                    </a>
-                    <a href="#">
-                        <li>Privacy Policy</li>
-                    </a>
-                </ul>
-
-            </div>
-            <div class="footer-nav">
-                <span class="category" data-toggle="list3">
-                    Our Company
-                </span>
-                <ul id="list3" class="nav-list">
-                    <a href="#">
-                        <li>About us</li>
-                    </a>
-                    <a href="#">
-                        <li>Careers</li>
-                    </a>
-                    <a href="#">
-                        <li>Blogs</li>
-                    </a>
-                    <a href="#">
-                        <li>Privacy Policy</li>
-                    </a>
-                </ul>
-
-            </div>
-        </div>
-        <script>
-            document.querySelectorAll('.category').forEach(button => {
-                button.addEventListener('click', function () {
-                    var toggleListId = this.getAttribute('data-toggle');
-                    var navList = document.getElementById(toggleListId);
-
-                    if (navList.style.display === 'none' || navList.style.display === '') {
-                        navList.style.display = 'block'; // Show the list
-                        this.classList.add('open'); // Rotate arrow
-                    } else {
-                        navList.style.display = 'none'; // Hide the list
-                        this.classList.remove('open'); // Reset arrow
-                    }
-                });
-            });
-        </script>
-        <div class="copyright">
-            <p>Copyright @YourCompany</p>
-        </div>
+        <custom-footer></custom-footer>
     </footer>
 </body>
 

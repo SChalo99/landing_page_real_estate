@@ -58,6 +58,7 @@
         margin-top: 20px;
     }
 
+    /* 
     .footer-container {
         display: flex;
         flex-direction: column-reverse;
@@ -105,28 +106,25 @@
         border-bottom: 2px solid white;
     }
 
-    /* Dropdown arrow with ::after */
+    /* Dropdown arrow with ::after
     .category::after {
         content: '';
         position: absolute;
         right: 10px;
         transform: translateY(200%) rotate(0deg);
-        /* Adjust to be perfectly centered */
         border-width: 5px;
-        /* Size of the arrow */
         border-style: solid;
         border-color: #fff transparent transparent transparent;
-        /* White arrow */
     }
 
     .category.open::after {
         transform: translateY(150%) rotate(180deg);
-        /* Rotate arrow when open */
-    }
+}
+*/
 }
 
-@media only screen and (min-width: 970px) {
+/* @media only screen and (min-width: 970px) {
     .nav-list {
         display: block !important;
     }
-}
+} */
