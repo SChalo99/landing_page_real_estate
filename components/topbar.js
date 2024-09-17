@@ -2,9 +2,10 @@ class TopBar extends HTMLElement {
     attrs = {
         background: "black",
         hover: "#B8B8B7",
-        logowidth: "300px",
+        logowidth: "200px",
         lettercolor: "white",
         letterhover: "white",
+        logo: "logo/logo_rectangle.png",
         tabs: [
             {
                 url: "#",
@@ -76,13 +77,13 @@ class TopBar extends HTMLElement {
         width: ${this.attrs.logowidth};
         height: 80px;
         display: flex;
-        justify-content: center;
         margin-right: auto;
     }
 
     .logo img {
-        width: ${this.attrs.logowidth};
+        margin-left: 5%;
         object-fit: contain;
+        width:28vh;
     }
 
     li {
@@ -189,7 +190,7 @@ class TopBar extends HTMLElement {
              <div class="nav-bar">
             <div class="nav-elements">
                 <div class="logo">
-                    <a href="#"><img src="logo/logo_rectangle.png" alt="img-logo"></a>
+                    <a href="#"><img src="${this.attrs.logo}" alt="img-logo"></a>
                 </div>
                 <ul class="navigations" id="navigations">
                 ${this.attrs.tabs.map((e) => `

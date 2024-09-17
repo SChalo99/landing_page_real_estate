@@ -106,7 +106,7 @@ class Footer extends HTMLElement {
 }
 
 .logo-footer {
-    width: 250px;
+    width: 23vh;
 }
 
 .footer-nav {
